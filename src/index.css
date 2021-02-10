@@ -4,7 +4,7 @@
   background-color: black;
   color: white;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 }
 .body {
@@ -15,6 +15,12 @@
   align-items: center;
   justify-content: center;
   height: 92.5%;
-  width: 98.9%;
+  width: 99%;
   margin: 10px 0px 10px 0px
+}
+.list {
+  margin-right: 20px;
+}
+.hamburger-react {
+  margin-left: 20px;
 }
