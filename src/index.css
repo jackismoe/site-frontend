@@ -15,8 +15,6 @@
 }
 .body, .blog, .projects, .contact {
   position: absolute;
-  background-color: black;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,4 +55,8 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, button {
 }
 .last {
   margin-right: 3px;
+}
+.projects {
+  position: relative;
+  display: grid;
 }

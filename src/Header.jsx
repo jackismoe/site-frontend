@@ -37,18 +37,18 @@ export default class Header extends React.Component {
   render() {
     return(
       <div className='header'>
-        <div class='name'>
-          <p class='name-name'>
+        <div className='name'>
+          <p className='name-name'>
             <em>
               <strong>
-                <span class='first'>J</span>
+                <span className='first'>J</span>
               </strong>
-                <span class='last'>M</span>
+                <span className='last'>M</span>
             </em>
           </p>
         </div>
-        <div class='extras'>
-          <div class='list'>
+        <div className='extras'>
+          <div className='list'>
             <p id='home-link' href='#' className='clicked' onClick={(e) => this.showHome(e)}>Home</p>
             <p id='project-link' href='#' className='not-clicked' onClick={(e) => this.showProjects(e)}>Projects</p>
             <p id='blog-link' href='#' className='not-clicked' onClick={(e) => this.showBlog(e)}>Blog</p>
