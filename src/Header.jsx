@@ -38,7 +38,14 @@ export default class Header extends React.Component {
     return(
       <div className='header'>
         <div class='name'>
-          <h2>Jackson Morgan</h2>
+          <p class='name-name'>
+            <em>
+              <strong>
+                <span class='first'>J</span>
+              </strong>
+                <span class='last'>M</span>
+            </em>
+          </p>
         </div>
         <div class='extras'>
           <div class='list'>

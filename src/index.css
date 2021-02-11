@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('./fonts/GlacialIndifference.otf') format('otf')
+}
+#root {
+  font-family: Glacial Indifference;
+}
 .header {
   position: relative;
   width: 100%;
@@ -6,7 +13,7 @@
   align-items: center;
   border-bottom: 2px solid black;
 }
-.body {
+.body, .blog, .projects, .contact {
   position: absolute;
   background-color: black;
   color: white;
@@ -18,7 +25,7 @@
   margin: 10px 0px 10px 0px
 }
 .extras {
-  margin-right: 20px;
+  margin-right: 115px;
   width: 40%;
   background-color: white;
   color: black;
@@ -36,8 +43,18 @@ a, button {
   cursor: pointer;
 }
 .name {
-  margin-left: 40px;
+  margin-left: 225px;
 }
 .clicked {
   border-bottom: 2px solid black;
+}
+.name-name {
+  font-size: 30px;
+  border: 3px solid black;
+}
+.first {
+  margin-left: 3px;
+}
+.last {
+  margin-right: 3px;
 }
