@@ -75,7 +75,7 @@ export default function Projects() {
               <a href={project.liveSite}>Demo</a>
             </div>
               <p className='project-notes'>{project.notes}</p>
-              {project.video !== '' ? <iframe src={project.video} width="950" height="580"></iframe> : null }
+              {project.video !== '' ? <iframe title={uuidv4()} src={project.video} width="950" height="580"></iframe> : null }
           </div>
         )
       })}
