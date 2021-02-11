@@ -1,12 +1,12 @@
 import React from 'react' 
-
+import { v4 as uuidv4 } from 'uuid';
 export default function Projects() {
 
  const thisSite = [
   { 
     name: "The site you're on",
     gitHub: 'https://github.com/jackismoe/portfolio-site',
-    notes: 'This is the website you are currently viewing. Built with statless react.',
+    notes: 'This is the website you are currently viewing. Built with stateless react.',
   }
  ]
 
@@ -16,7 +16,7 @@ export default function Projects() {
       gitHub: 'https://github.com/jackismoe/blackjack',
       liveSite: 'https://blackjacksim.netlify.app/',
       notes: 'A single player black jack game simulator. Built with React/Redux on the frontend and Ruby on Rails as an API. Works best on safari. A known bug with chrome (specifically Brave) where the card showed via DOM is not the card in your hand and will give inconsitent totals.',
-      video: 'https://drive.google.com/drive/u/2/my-drive',
+      video: 'https://drive.google.com/file/d/1BFeSr8VDKbiJ1CYnNCsQnPKabecsjdAI/preview',
       // image:, 
     },
     {
@@ -24,7 +24,7 @@ export default function Projects() {
       gitHub: 'https://github.com/jackismoe/myNextBeer',
       liveSite: 'https://mynextbeer.netlify.app/',
       notes: "An app that will randomly generate a new beer for you to try on your next trip out. It will also help you keep track of the ones you've had before so you don't end up with the same ones over and over. Currently, ES6's object orientation is only supported consistently on chrome or chromium browsers.",
-      video: 'https://drive.google.com/drive/u/3/my-drive',
+      video: 'https://drive.google.com/file/d/1-yoejcrScb10tG38XVXrqXhmnzPdzxgW/preview',
       // image:, 
     },
     {
@@ -32,7 +32,7 @@ export default function Projects() {
       gitHub: 'https://github.com/jackismoe/monopolySim',
       liveSite: 'https://monopolysimvjs.netlify.app/',
       notes: "A full scale monopoly simulator. Built for four players. Two branches exist, one using ES6's object oriented paradigm as frontend only, and another built with React/Redux and Rails. Currently incomplete. ES6's object orientation is only supported consistently on chrome or chromium browsers.",
-      video: 'https://github.com/jackismoe',
+      video: '',
       // image:, 
     },
     {
@@ -40,7 +40,7 @@ export default function Projects() {
       gitHub: 'https://github.com/jackismoe/SoundBar',
       liveSite: 'https://rorsoundbar.herokuapp.com/',
       notes: 'An instrument resale database. Think reverb or ebay. Built as an MVC structured application using just Ruby on Rails. Implements sorting mechanics and model dependencies for destruction of items.',
-      video: 'https://drive.google.com/drive/u/3/my-drive',
+      video: 'https://drive.google.com/file/d/1JnhMeg8Jy9xGVzMV2BjhegSfEdkoMpcl/preview',
       // image:, 
     },
     {
@@ -48,32 +48,39 @@ export default function Projects() {
       gitHub: 'https://github.com/jackismoe/topnewsd1',
       liveSite: 'https://github.com/jackismoe',
       notes: "My first development project. A CLI Ruby gem with a web scraper that goes to ESPN's Mens D1 Basketball site and grabs the top two stories on any given day. Currently not live on the web.",
-      video: 'https://drive.google.com/drive/u/0/my-drive?hl=en',
+      video: 'https://drive.google.com/file/d/1Qs3ZFGkpXzDJYel8CxUCyf5ilucB1U7U/preview',
       // image:, 
     },
   ]
 
   return(
+    <>
+    <h1 className='projects-title'>Projects</h1>
     <div className='projects'>
       {thisSite.map((site) => {
         return (
-          <>
-            <h2>{site.name}</h2>
+          <div key={uuidv4()}>
+            <h2 className='project-name'>{site.name}</h2>
             <a href={site.gitHub}>GitHub</a>
             <p>{site.notes}</p>
-          </>
+          </div>
         )
       })}
       {projects.map((project) => {
-        return (<>
-          <h2>{project.name}</h2>
-          <a href={project.gitHub}>GitHub</a>
-          <a href={project.liveSite}>Demo</a>
-          <a href={project.video}>Video</a>
-          <p>{project.notes}</p>
-          </>
+        return (
+          <div key={uuidv4()}>
+            <h2 className='project-name'>{project.name}</h2>
+            <div className='links'>
+              <a href={project.gitHub}>GitHub</a>
+              <a href={project.liveSite}>Demo</a>
+            </div>
+              <p className='project-notes'>{project.notes}</p>
+              {project.video !== '' ? <iframe src={project.video} width="950" height="580"></iframe> : null }
+          </div>
         )
       })}
     </div>
+    </>
   )
 }
+

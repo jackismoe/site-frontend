@@ -13,23 +13,39 @@
   align-items: center;
   border-bottom: 2px solid black;
 }
-.body, .blog, .projects, .contact, .resume {
-  position: absolute;
+
+.body, .body-title, .blog, .blog-title, .projects, .projects-title, .contact, .contact-title, .resume, .resume-title {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 92.5%;
-  width: 99%;
-  margin: 10px 0px 10px 0px
+  margin-left: 20%;
+  width: 60%;
+}
+
+.body-title, .blog-title, .projects-title, .resume-title {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
+.project-name {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  width: 20%;
+  display: flex;
+  justify-content: center;
 }
 .extras {
   margin-right: 115px;
   width: 40%;
   background-color: white;
-  color: black;
+  color: gray;
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+a {
+  color: gray;
+  text-decoration: none;
 }
 .list {
   display: flex;
@@ -48,7 +64,6 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, button {
 .clicked {
   border-bottom: 2px solid black;
 }
-
 .first {
   margin-left: 3px;
 }
@@ -58,4 +73,13 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, button {
 .projects {
   position: relative;
   display: grid;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10%;
+}
+.project-notes {
+  position: relative;
 }
