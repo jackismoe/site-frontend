@@ -49,10 +49,10 @@ export default class Header extends React.Component {
         </div>
         <div class='extras'>
           <div class='list'>
-            <a id='home-link' href='#' className='clicked' onClick={(e) => this.showHome(e)}>Home</a>
-            <a id='project-link' href='#' className='not-clicked' onClick={(e) => this.showProjects(e)}>Projects</a>
-            <a id='blog-link' href='#' className='not-clicked' onClick={(e) => this.showBlog(e)}>Blog</a>
-            <a id='contact-link' href='#' className='not-clicked' onClick={(e) => this.showContact(e)}>Contact</a>
+            <p id='home-link' href='#' className='clicked' onClick={(e) => this.showHome(e)}>Home</p>
+            <p> id='project-link' href='#' className='not-clicked' onClick={(e) => this.showProjects(e)}>Projects</p>
+            <p id='blog-link' href='#' className='not-clicked' onClick={(e) => this.showBlog(e)}>Blog</p>
+            <p id='contact-link' href='#' className='not-clicked' onClick={(e) => this.showContact(e)}>Contact</p>
           </div>
           <div>
             <button>Resume</button>
