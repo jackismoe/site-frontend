@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Body() {
+export default function Home() {
   return(
     <div className='body'>
-      body
+      Home
     </div>
   )
 }

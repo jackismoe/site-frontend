@@ -9,6 +9,7 @@ export default class Header extends React.Component {
     document.querySelector('#project-link').className = 'not-clicked'
     document.querySelector('#blog-link').className = 'not-clicked'
     document.querySelector('#contact-link').className = 'not-clicked'
+    document.querySelector('#resume-link').className = 'not-clicked'
   }
   showProjects = (e) => {
     e.preventDefault()
@@ -17,6 +18,7 @@ export default class Header extends React.Component {
     document.querySelector('#project-link').className = 'clicked'
     document.querySelector('#blog-link').className = 'not-clicked'
     document.querySelector('#contact-link').className = 'not-clicked'
+    document.querySelector('#resume-link').className = 'not-clicked'
   }
   showBlog = (e) => {
     e.preventDefault()
@@ -25,27 +27,34 @@ export default class Header extends React.Component {
     document.querySelector('#project-link').className = 'not-clicked'
     document.querySelector('#blog-link').className = 'clicked'
     document.querySelector('#contact-link').className = 'not-clicked'
+    document.querySelector('#resume-link').className = 'not-clicked'
   }  
-  showContact= (e) => {
+  showContact = (e) => {
     e.preventDefault()
     this.props.history.push('/contact')
     document.querySelector('#home-link').className = 'not-clicked'
     document.querySelector('#project-link').className = 'not-clicked'
     document.querySelector('#blog-link').className = 'not-clicked'
     document.querySelector('#contact-link').className = 'clicked'
+    document.querySelector('#resume-link').className = 'not-clicked'
+  }
+  showResume = (e) => {
+    e.preventDefault()
+    this.props.history.push('/resume')
+    document.querySelector('#home-link').className = 'not-clicked'
+    document.querySelector('#project-link').className = 'not-clicked'
+    document.querySelector('#blog-link').className = 'not-clicked'
+    document.querySelector('#contact-link').className = 'not-clicked'
+    document.querySelector('#resume-link').className = 'clicked'
   }
   render() {
     return(
       <div className='header'>
         <div className='name'>
-          <p className='name-name'>
             <em>
-              <strong>
                 <span className='first'>J</span>
-              </strong>
                 <span className='last'>M</span>
             </em>
-          </p>
         </div>
         <div className='extras'>
           <div className='list'>
@@ -55,7 +64,7 @@ export default class Header extends React.Component {
             <p id='contact-link' href='#' className='not-clicked' onClick={(e) => this.showContact(e)}>Contact</p>
           </div>
           <div>
-            <button>Resume</button>
+            <p id='resume-link' className='not-clicked' onClick={(e) => this.showResume(e)}>Resume</p>
           </div>
         </div>
       </div>

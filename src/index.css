@@ -13,7 +13,7 @@
   align-items: center;
   border-bottom: 2px solid black;
 }
-.body, .blog, .projects, .contact {
+.body, .blog, .projects, .contact, .resume {
   position: absolute;
   display: flex;
   align-items: center;
@@ -42,14 +42,13 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, button {
 }
 .name {
   margin-left: 225px;
+  border: 3px solid black;
+  font-size: 30px;
 }
 .clicked {
   border-bottom: 2px solid black;
 }
-.name-name {
-  font-size: 30px;
-  border: 3px solid black;
-}
+
 .first {
   margin-left: 3px;
 }
