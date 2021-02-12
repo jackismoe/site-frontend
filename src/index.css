@@ -27,12 +27,20 @@
   border-bottom: 2px solid black;
   padding-bottom: 5px;
 }
-.project-name {
+.project-name, p.site-welcome {
   border-bottom: 2px solid black;
+  border-left: 3px solid black;
   padding-bottom: 5px;
-  width: 20%;
+  width: 21%;
   display: flex;
   justify-content: center;
+}
+p.site-welcome {
+  height: 3%;
+  font-size: 20px;
+  width: 10%;
+  position: absolute;
+  left: 20%
 }
 .extras {
   margin-right: 115px;
@@ -63,6 +71,9 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, button {
 }
 .clicked {
   border-bottom: 2px solid black;
+  border-left: 3px solid black;
+  padding-bottom: 2px;
+  padding-left: 4px;
 }
 .first {
   margin-left: 3px;
@@ -82,4 +93,23 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, button {
 }
 .project-notes {
   position: relative;
+}
+.home {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  margin-left: 12%;
+}
+.self {
+  margin-top: 10%;
+  position: absolute;
+  width: 28%;
+  height: 47%;
+  background-image: url('./images/linkedin-gray.jpg');
+  background-size: cover;
+  background-position-x: -45px;
+  border-radius: 2%;
+  border: 2px solid black;
 }
