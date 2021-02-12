@@ -109,7 +109,45 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, button {
   height: 47%;
   background-image: url('./images/linkedin-gray.jpg');
   background-size: cover;
-  background-position-x: -45px;
   border-radius: 2%;
   border: 2px solid black;
+}
+#language {
+  width: 185px;
+  height: 175px;
+  background-position: center;
+  background-size: cover;
+}
+.css3 {
+  background-image: url('./images/css3.png');
+}
+.html5 {
+  background-image: url('./images/html5.png');
+}
+.javascript {
+  background-image: url('./images/javascript.png');
+  margin-right: 20px;;
+}
+.postgres {
+  background-image: url('./images/postgres.png');
+}
+.rails {
+  background-image: url('./images/rails.png');
+}
+.react {
+  background-image: url('./images/react.png');
+  margin-left: 15px;
+}
+.redux {
+  background-image: url('./images/redux.png');
+}
+.ruby {
+  background-image: url('./images/ruby.png');
+  padding: 0px 0px 0 5px;
+}
+.skills {
+  position: absolute;
+  display: flex;
+  top: 85%;
+  width: 95%;
 }
