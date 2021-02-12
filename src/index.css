@@ -162,6 +162,9 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, p#resume-link {
   top: 80%;
   width: 50%;
   font-size: 30px;
+  border-bottom: 2px solid black;
+  border-left: 3px solid black;
+  padding: 0 0 10px 10px;
 }
 a#blog-link {
   margin-top: 3%;
