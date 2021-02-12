@@ -4,7 +4,6 @@ import './index.css';
 import Home from './Home';
 import Header from './Header';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import Projects from './Projects'
 import Blog from './Blog'
 import Contact from './Contact'
 import Resume from './Resume'
@@ -14,7 +13,6 @@ ReactDOM.render(
     <Router>
       <Route path='/' component={Header}/>
       <Route exact path='/' component={Home}/>
-      <Route exact path='/projects' component={Projects}/>
       <Route exact path='/blog' component={Blog}/>
       <Route exact path='/contact' component={Contact}/>
       <Route exact path='/resume' component={Resume}/>

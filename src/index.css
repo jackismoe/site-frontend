@@ -82,8 +82,14 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, button {
   margin-right: 3px;
 }
 .projects {
-  position: relative;
+  position: absolute;
   display: grid;
+  top: 160%;
+}
+.projects-title {
+  position: absolute;
+  top: 150%;
+  height: 50px;
 }
 .links {
   display: flex;
@@ -103,11 +109,10 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, button {
   margin-left: 12%;
 }
 .self {
-  margin-top: 10%;
+  margin-top: 8%;
   position: absolute;
-  width: 28%;
-  height: 47%;
-  background-image: url('./images/linkedin-gray.jpg');
+  min-width: 40%;
+  min-height: 63%;
   background-size: cover;
   border-radius: 2%;
   border: 2px solid black;
@@ -148,6 +153,22 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, button {
 .skills {
   position: absolute;
   display: flex;
-  top: 85%;
+  top: 157%;
   width: 95%;
+  padding-bottom: 20px;
+}
+.welcome-message {
+  position: absolute;
+  top: 80%;
+  width: 50%;
+  font-size: 30px;
+}
+.arrow {
+  background-image: url('./images/arrow.png');
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: black;
+  right: 14%;
+  top: 115%;  
 }
