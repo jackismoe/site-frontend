@@ -27,7 +27,7 @@ export default class Header extends React.Component {
         <div className='extras'>
           <div className='list'>
             <p id='home-link' href='#' className='clicked' onClick={(e) => this.showHome(e)}>Home</p>
-            <a id='blog-link' target='_blank'href='https://www.medium.com/@jacksonmo' className='not-clicked'>Blog</a>
+            <a id='blog-link' rel="noreferrer" target='_blank'href='https://www.medium.com/@jacksonmo' className='not-clicked'>Blog</a>
             <p id='resume-link' href='#' className='not-clicked' onClick={(e) => this.showResume(e)}>Resume</p>
           </div>
         </div>
