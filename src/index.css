@@ -13,43 +13,35 @@
   align-items: center;
   border-bottom: 2px solid black;
 }
-
-.body, .body-title, .blog, .blog-title, .projects, .projects-title, .contact, .contact-title, .resume, .resume-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 92.5%;
-  margin-left: 20%;
-  width: 60%;
-}
-
-.body-title, .blog-title, .projects-title, .resume-title {
-  border-bottom: 2px solid black;
-  padding-bottom: 5px;
-}
 .project-name, p.site-welcome {
   border-bottom: 2px solid black;
-  border-left: 3px solid black;
+  border-left: 4px solid black;
   padding-bottom: 5px;
-  width: 21%;
+  width: 45%;
   display: flex;
   justify-content: center;
 }
 p.site-welcome {
   height: 3%;
   font-size: 20px;
-  width: 10%;
-  position: absolute;
-  left: 20%
+  width: 30%;
+  padding-bottom: 20px;
+  position: relative;
+  left: -40%;
+}
+.welcome-message {
+  font-size: 20px;
+  text-align: center;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .extras {
-  margin-right: 115px;
-  width: 40%;
-  background-color: white;
   color: gray;
+  width: 35%;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 a {
   color: gray;
@@ -57,17 +49,17 @@ a {
 }
 .list {
   display: flex;
-  align-content: center;
-  justify-content: space-around;
-  width: 75%;
+  justify-content: space-between;
+  width: 30%;
 }
-p#home-link,p#project-link, p#blog-link, p#contact-link, p#resume-link {
+p#home-link, p#blog-link, p#resume-link {
   cursor: pointer;
+  margin: 0 15px 3px 15px;
 }
 .name {
-  margin-left: 225px;
   border: 3px solid black;
-  font-size: 30px;
+  margin-bottom: 3px;
+  font-size: 20px;
 }
 .clicked {
   border-bottom: 2px solid black;
@@ -81,91 +73,110 @@ p#home-link,p#project-link, p#blog-link, p#contact-link, p#resume-link {
 .last {
   margin-right: 3px;
 }
-.projects {
-  position: absolute;
-  display: grid;
-  top: 160%;
-}
-.projects-title {
-  position: absolute;
-  top: 150%;
-  height: 50px;
-}
 .links {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 10%;
-}
-.project-notes {
-  position: relative;
-}
-.home {
-  position: absolute;
-  width: 75%;
-  height: 75%;
-  display: flex;
-  justify-content: center;
-  margin-left: 12%;
+  width: 20%;
 }
 .self {
-  margin-top: 8%;
-  position: absolute;
   min-width: 40%;
   min-height: 63%;
   background-size: cover;
   border-radius: 2%;
   border: 2px solid black;
+  width: 40%;
+  margin-top: 5%;
+  height: auto;
 }
 #language {
   width: 185px;
   height: 175px;
   background-position: center;
-  background-size: cover;
 }
 .css3 {
   background-image: url('./images/css3.png');
+  margin: 5px 0 5px 0;
+  background-size: cover;
 }
 .html5 {
   background-image: url('./images/html5.png');
+  margin: 5px 0 5px 0;
+  background-size: cover;
 }
 .javascript {
   background-image: url('./images/javascript.png');
+  margin: 5px 0 5px 0;
   margin-right: 20px;;
+  background-size: cover;
 }
 .postgres {
   background-image: url('./images/postgres.png');
+  margin: 5px 0 5px 0;
+  background-size: cover;
 }
 .rails {
   background-image: url('./images/rails.png');
+  margin: 5px 0 5px 0;
+  background-size: cover;
 }
 .react {
   background-image: url('./images/react.png');
+  margin: 5px 0 5px 0;
   margin-left: 15px;
+  background-size: cover;
 }
 .redux {
   background-image: url('./images/redux.png');
+  margin: 5px 0 5px 0;
+  background-size: cover;
 }
 .ruby {
   background-image: url('./images/ruby.png');
+  margin: 5px 0 5px 0;
   padding: 0px 0px 0 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.homepage {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 75%;
+  margin-left: 14%;
+}
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%
+}
+.name-container {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
 }
 .skills {
-  position: absolute;
+  width: fit-content;
+  display: contents;
+}
+.projects-title {
+  width: 100%;
+  border-bottom: 2px solid;
+  border-left: 5px solid;
+  padding: 0 0 2% 4%;
+}
+.projects {
+  width: 100%;
+}
+.project-video {
+  width: 100%;
+}
+.ind-project {
+  margin-bottom: 5%;
+}
+.portrait-container {
+  width: 100%;
   display: flex;
-  top: 157%;
-  width: 95%;
-  padding-bottom: 20px;
-}
-.welcome-message {
-  position: absolute;
-  top: 80%;
-  width: 50%;
-  font-size: 30px;
-  border-bottom: 2px solid black;
-  border-left: 3px solid black;
-  padding: 0 0 10px 10px;
-}
-a#blog-link {
-  margin-top: 3%;
+  justify-content: center;
 }

@@ -56,43 +56,44 @@ export default function Home() {
     },
   ]
   return(
-      <>
+      <div className='homepage'>
         <div className='home'>
           <p className='site-welcome'>Welcome!</p>
-          <img alt='a self portrait' className='self' width='200px' height='200px' src={self} />
-          <p className='welcome-message'>My name is Jackson Morgan. I am a web developer and software engineer, specializing in frontend contruction with Javascript and React/Redux. I've been using HTML5 and CSS3 to develop static websites for myself and friends since 2017, and started to implement Javascript into personal projects aorund 2018. I consider myself proficient in vanilla Ruby and Ruby on Rails, as well as ES6 and React. Moving forward my focus is on developing a taste for Typescript, and broadening my horizons with Python and Java. I'm a huge fan of minimalist design especially in the web design space. Feel free to check out my projects below, or dig through my blog and resume above. Cheers!</p>
+          <p className='welcome-message'>My name is Jackson Morgan. I am a web developer and software engineer, specializing in frontend contruction with Javascript and React/Redux. I've been using HTML5 and CSS3 to develop static websites for myself and friends since 2017, and started to implement Javascript into personal projects aorund 2018. I consider myself proficient in vanilla Ruby and Ruby on Rails, as well as ES6 and React. Moving forward my focus is on developing a taste for Typescript, and broadening my horizons with Python and Java. I'm a huge fan of minimalism especially in the web design space. Feel free to check out my projects below, or dig through my blog and resume above. Cheers!</p>
+        </div>
+        <div className='projects'>
+          <h1 className='projects-title'>Projects</h1>
+            {thisSite.map((site) => {
+              return (
+                <div key={uuidv4()}>
+                  <h2 className='project-name'>{site.name}</h2>
+                  <a href={site.gitHub}>GitHub</a>
+                  <p>{site.notes}</p>
+                </div>
+              )
+            })}
+            {projects.map((project) => {
+              return (
+                <div className='ind-project' key={uuidv4()}>
+                  <h2 className='project-name'>{project.name}</h2>
+                  <div className='links'>
+                    <a href={project.gitHub}>GitHub</a>
+                    {project.liveSite !== '' ? <a href={project.liveSite}>Demo</a> : null }
+                  </div>
+                    <p className='project-notes'>{project.notes}</p>
+                    {project.video !== '' ? <iframe className='project-video' title={uuidv4()} src={project.video} width="950" height="580"></iframe> : null }
+                </div>
+              )
+            })}
+        </div>        
           <div className='skills'>
             {languages.map((item) => {
               return <div key={uuidv4()} id='language' className={`${item}`}/>
             })}
           </div>
-        </div>
-        
-        <h1 className='projects-title'>Projects</h1>
-        <div className='projects'>
-          {thisSite.map((site) => {
-            return (
-              <div key={uuidv4()}>
-                <h2 className='project-name'>{site.name}</h2>
-                <a href={site.gitHub}>GitHub</a>
-                <p>{site.notes}</p>
-              </div>
-            )
-          })}
-          {projects.map((project) => {
-            return (
-              <div key={uuidv4()}>
-                <h2 className='project-name'>{project.name}</h2>
-                <div className='links'>
-                  <a href={project.gitHub}>GitHub</a>
-                  {project.liveSite !== '' ? <a href={project.liveSite}>Demo</a> : null }
-                </div>
-                  <p className='project-notes'>{project.notes}</p>
-                  {project.video !== '' ? <iframe title={uuidv4()} src={project.video} width="950" height="580"></iframe> : null }
-              </div>
-            )
-          })}
-        </div>
-    </>
+          <div className='portrait-container'>
+            <img alt='a self portrait' className='self' width='220px' height='200px' src={self} />
+          </div>
+    </div>
   )
 }
