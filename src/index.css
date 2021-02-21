@@ -207,3 +207,32 @@ p#home-link, p#blog-link, p#resume-link {
   align-items: center;
   width: 100%;;
 }
+
+@media only screen and (max-width: 600px) {
+  .header {
+    justify-content: end;
+  }
+  .home {
+    margin-top: 10%;
+  }
+  .welcome-message {
+    font-size: 15px;
+  }
+  .github-logo {
+    position: relative;
+    width: 15%;
+    height: 100%;
+  }
+  .linkedin-logo {
+    position: relative;
+    width: 11%;
+    height: 74%;
+  }
+  .links {
+    width: 98%
+  }
+  .project-name {
+    font-size: 15px;
+    width: 98%;
+  }
+}
