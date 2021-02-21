@@ -1,11 +1,12 @@
 import React from 'react'
 import {v4 as uuidv4} from 'uuid'
-import self from './images/self.png'
+import linkedin from './images/linkedin.png'
+import github from './images/github.png'
 
-export default function Home() {
-  const languages = ['css3', 'html5', 'javascript', 'postgres', 'rails', 'ruby', 'react', 'redux']
+export default class Home extends React.Component {
+  languages = ['css3', 'html5', 'javascript', 'postgres', 'rails', 'ruby', 'react', 'redux']
 
-  const thisSite = [
+  thisSite = [
   { 
     name: "The site you're on",
     gitHub: 'https://github.com/jackismoe/portfolio-site',
@@ -13,7 +14,7 @@ export default function Home() {
   }
  ]
 
-  const projects = [
+  projects = [
     {
       name: 'reactJack',
       gitHub: 'https://github.com/jackismoe/blackjack',
@@ -51,49 +52,62 @@ export default function Home() {
       gitHub: 'https://github.com/jackismoe/topnewsd1',
       liveSite: '',
       notes: "My first development project. A CLI Ruby gem with a web scraper that goes to ESPN's Mens D1 Basketball site and grabs the top two stories on any given day. Currently not live on the web.",
-      video: 'https://drive.google.com/file/d/1Qs3ZFGkpXzDJYel8CxUCyf5ilucB1U7U/preview',
+      video: 'http://drive.google.com/file/d/1Qs3ZFGkpXzDJYel8CxUCyf5ilucB1U7U/preview',
       // image:, 
     },
   ]
-  return(
-      <div className='homepage'>
-        <div className='home'>
-          <p className='site-welcome'>Welcome!</p>
-          <p className='welcome-message'>My name is Jackson Morgan. I am a web developer and software engineer, specializing in frontend contruction with Javascript and React/Redux. I've been using HTML5 and CSS3 to develop static websites for myself and friends since 2017, and started to implement Javascript into personal projects aorund 2018. I consider myself proficient in vanilla Ruby and Ruby on Rails, as well as ES6 and React. Moving forward my focus is on developing a taste for Typescript, and broadening my horizons with Python and Java. I'm a huge fan of minimalism especially in the web design space. Feel free to check out my projects below, or dig through my blog and resume above. Cheers!</p>
-        </div>
-        <div className='projects'>
-          <h1 className='projects-title'>Projects</h1>
-            {thisSite.map((site) => {
-              return (
-                <div key={uuidv4()}>
-                  <h2 className='project-name'>{site.name}</h2>
-                  <a href={site.gitHub}>GitHub</a>
-                  <p>{site.notes}</p>
-                </div>
-              )
-            })}
-            {projects.map((project) => {
-              return (
-                <div className='ind-project' key={uuidv4()}>
-                  <h2 className='project-name'>{project.name}</h2>
-                  <div className='links'>
-                    <a href={project.gitHub}>GitHub</a>
-                    {project.liveSite !== '' ? <a href={project.liveSite}>Demo</a> : null }
+
+  handleGithub = event => {
+    event.preventDefault()
+    window.open('https://www.github.com/jackismoe')
+  }
+
+  handleLinkedin = event => {
+    event.preventDefault()
+    window.open('https://www.linkedin.com/in/jackismoe')
+  }
+  
+  render() {
+    return(
+        <div className='homepage'>
+          <div className='home'>
+            <div className='logos'>
+              <img onClick={this.handleLinkedin} alt='logo' className='linkedin-logo'src={linkedin}/>
+              <img onClick={this.handleGithub} alt='logo' className='github-logo'src={github}/>
+            </div>
+            <p className='welcome-message'>My name is Jackson Morgan. I am a web developer and software engineer, specializing in frontend contruction with Javascript and React/Redux. I've been using HTML5 and CSS3 to develop static websites for myself and friends since 2017, and started to implement Javascript into personal projects aorund 2018. I consider myself proficient in vanilla Ruby and Ruby on Rails, as well as ES6 and React. Moving forward my focus is on developing a taste for Typescript, and broadening my horizons with Python and Java. I'm a huge fan of minimalism especially in the web design space. Feel free to check out my projects below, or dig through my blog and resume above. Cheers!</p>
+          </div>
+          <div className='projects'>
+            <h1 className='projects-title'>Projects</h1>
+              {this.thisSite.map((site) => {
+                return (
+                  <div key={uuidv4()}>
+                    <h2 className='project-name'>{site.name}</h2>
+                    <a href={site.gitHub}>GitHub</a>
+                    <p>{site.notes}</p>
                   </div>
-                    <p className='project-notes'>{project.notes}</p>
-                    {project.video !== '' ? <iframe className='project-video' title={uuidv4()} src={project.video} width="950" height="580"></iframe> : null }
-                </div>
-              )
-            })}
-        </div>        
+                )
+              })}
+              {this.projects.map((project) => {
+                return (
+                  <div className='ind-project' key={uuidv4()}>
+                    <h2 className='project-name'>{project.name}</h2>
+                    <div className='links'>
+                      <a href={project.gitHub}>GitHub</a>
+                      {project.video !== '' ? <a href={project.video}>Video</a> : null }
+                      {project.liveSite !== '' ? <a href={project.liveSite}>Demo</a> : null }
+                    </div>
+                      <p className='project-notes'>{project.notes}</p>
+                  </div>
+                )
+              })}
+          </div>        
           <div className='skills'>
-            {languages.map((item) => {
+            {this.languages.map((item) => {
               return <div key={uuidv4()} id='language' className={`${item}`}/>
             })}
           </div>
-          <div className='portrait-container'>
-            <img alt='a self portrait' className='self' width='220px' height='200px' src={self} />
-          </div>
-    </div>
-  )
+        </div>
+      )
+    }
 }
