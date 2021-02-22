@@ -248,5 +248,8 @@ p#home-link, p#blog-link, p#resume-link {
     height: 55px;
     background-position: center;
   }
-
+  .name-container {
+    margin-left: 6%;
+    justify-content: flex-start;
+  }
 }
