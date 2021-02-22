@@ -61,18 +61,12 @@ export default class Home extends React.Component {
     event.preventDefault()
     window.open('https://www.github.com/jackismoe')
   }
-
-  handleLinkedin = event => {
-    event.preventDefault()
-    window.open('https://www.linkedin.com/in/jackismoe')
-  }
   
   render() {
     return(
         <div className='homepage'>
           <div className='home'>
             <div className='logos'>
-              <img onClick={this.handleLinkedin} alt='logo' className='linkedin-logo'src={linkedin}/>
               <img onClick={this.handleGithub} alt='logo' className='github-logo'src={github}/>
             </div>
             <p className='welcome-message'>My name is Jackson Morgan. I am a web developer and software engineer, specializing in frontend contruction with Javascript and React/Redux. I've been using HTML5 and CSS3 to develop static websites for myself and friends since 2017, and started to implement Javascript into personal projects aorund 2018. I consider myself proficient in vanilla Ruby and Ruby on Rails, as well as ES6 and React. Moving forward my focus is on developing a taste for Typescript, and broadening my horizons with Python and Java. I'm a huge fan of minimalism especially in the web design space. Feel free to check out my projects below, or dig through my blog and resume above. Cheers!</p>
