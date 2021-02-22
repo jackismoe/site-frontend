@@ -4,6 +4,9 @@
 }
 #root {
   font-family: Glacial Indifference;
+  background-image: url('./images/ochin.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .header {
   position: relative;
@@ -142,7 +145,6 @@ p#home-link, p#blog-link, p#resume-link {
   width: 75%;
   margin-left: 11%;
   background-color: white;
-  opacity: 90%;
   margin-top: 2%;
   padding-left: 2%;
   padding-right: 2%;
@@ -198,7 +200,7 @@ p#home-link, p#blog-link, p#resume-link {
   height: 35px;
 }
 .logos {
-  margin-top: 2%;
+  margin-top: 5%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -207,7 +209,7 @@ p#home-link, p#blog-link, p#resume-link {
   background-size: cover;
 }
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .header {
     justify-content: end;
   }
@@ -237,4 +239,4 @@ p#home-link, p#blog-link, p#resume-link {
   .logos {
     margin-top: 15px;
   }
-} */
+}
