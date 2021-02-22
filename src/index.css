@@ -195,9 +195,6 @@ p#home-link, p#blog-link, p#resume-link {
   width: 35px;
   height: 35px;
 }
-.linkedin-logo:hover {
-  cursor: pointer;
-}
 .logos {
   margin-top: 5%;
   display: flex;
