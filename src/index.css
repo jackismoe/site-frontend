@@ -147,7 +147,7 @@ p#home-link, p#blog-link, p#resume-link {
   margin-left: 11%;
   background-color: white;
   opacity: 90%;
-  margin-top: 3%;
+  margin-top: 2%;
   padding-left: 2%;
   padding-right: 2%;
 }
@@ -208,12 +208,12 @@ p#home-link, p#blog-link, p#resume-link {
   width: 100%;;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
   .header {
     justify-content: end;
   }
   .home {
-    margin-top: 10%;
+    margin-top: 5%;
   }
   .welcome-message {
     font-size: 15px;
