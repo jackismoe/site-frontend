@@ -7,6 +7,7 @@
   background-image: url('./images/ochin.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .header {
   position: relative;
