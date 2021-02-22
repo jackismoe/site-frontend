@@ -195,6 +195,11 @@ p#home-link, p#blog-link, p#resume-link {
   width: 35px;
   height: 35px;
 }
+.github-logo {
+  position: relative;
+  width: 45px;
+  height: 45px;
+}
 .logos {
   margin-top: 5%;
   display: flex;
