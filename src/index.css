@@ -4,10 +4,6 @@
 }
 #root {
   font-family: Glacial Indifference;
-  background-image: url('./images/ochin.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 .header {
   position: relative;
@@ -173,6 +169,7 @@ p#home-link, p#blog-link, p#resume-link {
 }
 .projects {
   width: 100%;
+  margin-top: 75px;
 }
 .project-video {
   width: 100%;
@@ -192,20 +189,22 @@ p#home-link, p#blog-link, p#resume-link {
 }
 .github-logo {
   position: relative;
-  width: 5%;
-  height: 100%;
+  width: 45px;
+  height: 45px;
 }
 .linkedin-logo {
   position: relative;
-  width: 4%;
-  height: 74%;
+  width: 35px;
+  height: 35px;
 }
 .logos {
   margin-top: 2%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {
@@ -218,7 +217,7 @@ p#home-link, p#blog-link, p#resume-link {
   .welcome-message {
     font-size: 15px;
   }
-  .github-logo {
+  /* .github-logo {
     position: relative;
     width: 15%;
     height: 100%;
@@ -227,12 +226,15 @@ p#home-link, p#blog-link, p#resume-link {
     position: relative;
     width: 11%;
     height: 74%;
-  }
+  } */
   .links {
     width: 98%
   }
   .project-name {
     font-size: 15px;
     width: 98%;
+  }
+  .logos {
+    margin-top: 15px;
   }
 }
