@@ -207,7 +207,7 @@ p#home-link, p#blog-link, p#resume-link {
   background-size: cover;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .header {
     justify-content: end;
   }
@@ -217,7 +217,7 @@ p#home-link, p#blog-link, p#resume-link {
   .welcome-message {
     font-size: 15px;
   }
-  /* .github-logo {
+  .github-logo {
     position: relative;
     width: 15%;
     height: 100%;
@@ -226,7 +226,7 @@ p#home-link, p#blog-link, p#resume-link {
     position: relative;
     width: 11%;
     height: 74%;
-  } */
+  }
   .links {
     width: 98%
   }
@@ -237,4 +237,4 @@ p#home-link, p#blog-link, p#resume-link {
   .logos {
     margin-top: 15px;
   }
-}
+} */
