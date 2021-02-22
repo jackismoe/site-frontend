@@ -222,8 +222,8 @@ p#home-link, p#blog-link, p#resume-link {
   }
   .linkedin-logo {
     position: relative;
-    width: 11%;
-    height: 74%;
+    width: 35px;
+    height: 35px;
   }
   .links {
     width: 98%
