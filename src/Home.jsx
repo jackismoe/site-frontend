@@ -2,6 +2,9 @@ import React from 'react'
 import {v4 as uuidv4} from 'uuid'
 import linkedin from './images/linkedin.png'
 import github from './images/github.png'
+import Banner from './Banner'
+import BlackJackGif from './images/blackjack-code.gif'
+
 
 export default class Home extends React.Component {
   languages = ['css3', 'html5', 'javascript', 'postgres', 'rails', 'ruby', 'react', 'redux']
@@ -21,7 +24,7 @@ export default class Home extends React.Component {
       liveSite: 'https://blackjacksim.netlify.app/',
       notes: 'A single player black jack game simulator. Built with React/Redux on the frontend and Ruby on Rails as an API. Works best on safari. A known bug with chrome (specifically Brave) where the card showed via DOM is not the card in your hand and will give inconsitent totals.',
       video: 'https://drive.google.com/file/d/1BFeSr8VDKbiJ1CYnNCsQnPKabecsjdAI/preview',
-      // image:, 
+      image: {BlackJackGif}, 
     },
     {
       name: 'myNextBeer',
@@ -72,16 +75,15 @@ export default class Home extends React.Component {
         <div className='homepage'>
           <div className='home'>
             <div className='logos'>
-              <img onClick={this.handleLinkedin} alt='logo' className='linkedin-logo'src={linkedin}/>
-              <img onClick={this.handleGithub} alt='logo' className='github-logo'src={github}/>
+              {/* <img onClick={this.handleLinkedin} alt='logo' className='linkedin-logo'src={linkedin}/>
+              <img onClick={this.handleGithub} alt='logo' className='github-logo'src={github}/> */}
             </div>
-            <p className='welcome-message'>My name is Jackson Morgan. I am a web developer and software engineer, specializing in frontend contruction with Javascript and React/Redux. I've been using HTML5 and CSS3 to develop static websites for myself and friends since 2017, and started to implement Javascript into personal projects aorund 2018. I consider myself proficient in vanilla Ruby and Ruby on Rails, as well as ES6 and React. Moving forward my focus is on developing a taste for Typescript, and broadening my horizons with Python and Java. I'm a huge fan of minimalism especially in the web design space. Feel free to check out my projects below, or dig through my blog and resume above. Cheers!</p>
+            <p className='welcome-message'></p>
           </div>
           <div className='projects'>
-            <h1 className='projects-title'>Projects</h1>
               {this.thisSite.map((site) => {
                 return (
-                  <div key={uuidv4()}>
+                  <div className='ind-project' key={uuidv4()}>
                     <h2 className='project-name'>{site.name}</h2>
                     <a href={site.gitHub}>GitHub</a>
                     <p>{site.notes}</p>
