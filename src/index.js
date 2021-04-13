@@ -11,7 +11,7 @@ import Resume from './Resume'
 ReactDOM.render(
     <Router>
       <Route path='/' component={Header}/>
-      <Route exact path='/' component={Banner}/>
+      {/* <Route exact path='/' component={Banner}/> */}
       <Route exact path='/' component={Home}/>
       <Route exact path='/resume' component={Resume}/>
     </Router>,

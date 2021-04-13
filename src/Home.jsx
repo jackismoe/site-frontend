@@ -11,7 +11,7 @@ export default class Home extends React.Component {
 
   thisSite = [
   { 
-    name: "The site you're on",
+    name: "This site",
     gitHub: 'https://github.com/jackismoe/portfolio-site',
     notes: 'This is the website you are currently viewing. Built with stateless react.',
   }
@@ -24,16 +24,16 @@ export default class Home extends React.Component {
       liveSite: 'https://blackjacksim.netlify.app/',
       notes: 'A single player black jack game simulator. Built with React/Redux on the frontend and Ruby on Rails as an API. Works best on safari. A known bug with chrome (specifically Brave) where the card showed via DOM is not the card in your hand and will give inconsitent totals.',
       video: 'https://drive.google.com/file/d/1BFeSr8VDKbiJ1CYnNCsQnPKabecsjdAI/preview',
-      image: {BlackJackGif}, 
+      // image: {BlackJackGif}, 
     },
-    {
-      name: 'myNextBeer',
-      gitHub: 'https://github.com/jackismoe/myNextBeer',
-      liveSite: 'https://mynextbeer.netlify.app/',
-      notes: "An app that will randomly generate a new beer for you to try on your next trip out. It will also help you keep track of the ones you've had before so you don't end up with the same ones over and over. Currently, ES6's object oriented syntax is only currently supported consistently on chrome or chromium browsers.",
-      video: 'https://drive.google.com/file/d/1-yoejcrScb10tG38XVXrqXhmnzPdzxgW/preview',
-      // image:, 
-    },
+    // {
+    //   name: 'myNextBeer',
+    //   gitHub: 'https://github.com/jackismoe/myNextBeer',
+    //   liveSite: 'https://mynextbeer.netlify.app/',
+    //   notes: "An app that will randomly generate a new beer for you to try on your next trip out. It will also help you keep track of the ones you've had before so you don't end up with the same ones over and over. Currently, ES6's object oriented syntax is only currently supported consistently on chrome or chromium browsers.",
+    //   video: 'https://drive.google.com/file/d/1-yoejcrScb10tG38XVXrqXhmnzPdzxgW/preview',
+    //   // image:, 
+    // },
     {
       name: 'monopolySim',
       gitHub: 'https://github.com/jackismoe/monopolySim',
@@ -78,15 +78,17 @@ export default class Home extends React.Component {
               {/* <img onClick={this.handleLinkedin} alt='logo' className='linkedin-logo'src={linkedin}/>
               <img onClick={this.handleGithub} alt='logo' className='github-logo'src={github}/> */}
             </div>
-            <p className='welcome-message'></p>
+            <p className='welcome-message'>As a modern citizen of the world and a technically inclined person, I am obsessed with finding ways to expedite and automate certain parts of life. The tedious and monotonous aspects of day to day functioning pulls away from the moment that we as humans are meant to enjoy. I have gone headfirst into learning everything I can about web development, and specifically front-end development.</p>
           </div>
           <div className='projects'>
               {this.thisSite.map((site) => {
                 return (
                   <div className='ind-project' key={uuidv4()}>
                     <h2 className='project-name'>{site.name}</h2>
-                    <a href={site.gitHub}>GitHub</a>
-                    <p>{site.notes}</p>
+                    <div className='links'>
+                      <a className='port-link' href={site.gitHub}>GitHub</a>
+                    </div>
+                    <p className='project-notes'>{site.notes}</p>
                   </div>
                 )
               })}
