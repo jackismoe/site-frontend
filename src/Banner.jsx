@@ -1,7 +1,7 @@
 import React from 'react'
-import BlackJack from './images/blackjack-demo.gif'
-import Monopoly from './images/monopoly-demo.gif'
-import Soundbar from './images/soundbar-demo.gif'
+// import BlackJack from './images/blackjack-demo.gif'
+// import Monopoly from './images/monopoly-demo.gif'
+// import Soundbar from './images/soundbar-demo.gif'
 
 
 export default class Banner extends React.Component {
@@ -9,9 +9,9 @@ export default class Banner extends React.Component {
     return(
       <div className='banner-slider'>
         <div className='banner-container'>
-          <img className='blackjack-demo' src={BlackJack}/>
+          {/* <img className='blackjack-demo' src={BlackJack}/>
           <img className='blackjack-demo' src={Monopoly}/>
-          <img className='blackjack-demo' src={Soundbar}/>
+          <img className='blackjack-demo' src={Soundbar}/> */}
 
         </div>
       </div>

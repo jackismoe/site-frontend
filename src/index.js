@@ -4,7 +4,7 @@ import './index.css';
 import Home from './Home';
 import Header from './Header';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import Banner from './Banner'
+// import Banner from './Banner'
 import Resume from './Resume'
 // import {Provider} from 'react-redux'
 

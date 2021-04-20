@@ -1,9 +1,9 @@
 import React from 'react'
 import {v4 as uuidv4} from 'uuid'
-import linkedin from './images/linkedin.png'
-import github from './images/github.png'
-import Banner from './Banner'
-import BlackJackGif from './images/blackjack-code.gif'
+// import linkedin from './images/linkedin.png'
+// import github from './images/github.png'
+// import Banner from './Banner'
+// import BlackJackGif from './images/blackjack-code.gif'
 
 
 export default class Home extends React.Component {
@@ -18,6 +18,14 @@ export default class Home extends React.Component {
  ]
 
   projects = [
+    {
+      name: 'myScoreCard.xyz',
+      gitHub: 'https://github.com/jackismoe/myscorecard.xyz',
+      liveSite: 'https://myscorecard.xyz',
+      notes: "An application built for use on a golf course. As you're playing, keep track of your score, check the average of the course you're playing on to see how you rank against your peers, and add your scores to our database for bragging rights later.",
+      video: '',
+      // image: {BlackJackGif
+    }, 
     {
       name: 'reactJack',
       gitHub: 'https://github.com/jackismoe/blackjack',
