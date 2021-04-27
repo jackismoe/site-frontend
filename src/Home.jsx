@@ -12,7 +12,7 @@ export default class Home extends React.Component {
   thisSite = [
   { 
     name: "This site",
-    gitHub: 'https://github.com/jackismoe/portfolio-site',
+    gitHub: 'https://github.com/jvckmo/portfolio-site',
     notes: 'This is the website you are currently viewing. Built with stateless react.',
   }
  ]
@@ -20,7 +20,7 @@ export default class Home extends React.Component {
   projects = [
     {
       name: 'myScoreCard.xyz',
-      gitHub: 'https://github.com/jackismoe/myscorecard.xyz',
+      gitHub: 'https://github.com/jvckmo/myscorecard.xyz',
       liveSite: 'https://myscorecard.xyz',
       notes: "An application built for use on a golf course. As you're playing, keep track of your score, check the average of the course you're playing on to see how you rank against your peers, and add your scores to our database for bragging rights later.",
       video: '',
@@ -28,7 +28,7 @@ export default class Home extends React.Component {
     }, 
     {
       name: 'reactJack',
-      gitHub: 'https://github.com/jackismoe/blackjack',
+      gitHub: 'https://github.com/jvckmo/blackjack',
       liveSite: 'https://blackjacksim.netlify.app/',
       notes: 'A single player black jack game simulator. Built with React/Redux on the frontend and Ruby on Rails as an API. Works best on safari. A known bug with chrome (specifically Brave) where the card showed via DOM is not the card in your hand and will give inconsitent totals.',
       video: 'https://drive.google.com/file/d/1BFeSr8VDKbiJ1CYnNCsQnPKabecsjdAI/preview',
@@ -36,7 +36,7 @@ export default class Home extends React.Component {
     },
     // {
     //   name: 'myNextBeer',
-    //   gitHub: 'https://github.com/jackismoe/myNextBeer',
+    //   gitHub: 'https://github.com/jvckmo/myNextBeer',
     //   liveSite: 'https://mynextbeer.netlify.app/',
     //   notes: "An app that will randomly generate a new beer for you to try on your next trip out. It will also help you keep track of the ones you've had before so you don't end up with the same ones over and over. Currently, ES6's object oriented syntax is only currently supported consistently on chrome or chromium browsers.",
     //   video: 'https://drive.google.com/file/d/1-yoejcrScb10tG38XVXrqXhmnzPdzxgW/preview',
@@ -44,7 +44,7 @@ export default class Home extends React.Component {
     // },
     {
       name: 'monopolySim',
-      gitHub: 'https://github.com/jackismoe/monopolySim',
+      gitHub: 'https://github.com/jvckmo/monopolySim',
       liveSite: 'https://monopolysimvjs.netlify.app/',
       notes: "A full scale monopoly simulator. Built for four players. Two branches exist, one using ES6's object oriented paradigm as frontend only, and another built with React/Redux and Rails. Currently incomplete. ES6's object oriented syntax is only currently supported consistently on chrome or chromium browsers.",
       video: '',
@@ -52,7 +52,7 @@ export default class Home extends React.Component {
     },
     {
       name: 'soundBar',
-      gitHub: 'https://github.com/jackismoe/SoundBar',
+      gitHub: 'https://github.com/jvckmo/SoundBar',
       liveSite: 'https://rorsoundbar.herokuapp.com/',
       notes: 'An instrument resale database. Think reverb or ebay. Built as an MVC structured application using just Ruby on Rails. Implements sorting mechanics and model dependencies for destruction of items.',
       video: 'https://drive.google.com/file/d/1JnhMeg8Jy9xGVzMV2BjhegSfEdkoMpcl/preview',
@@ -60,7 +60,7 @@ export default class Home extends React.Component {
     },
     {
       name: 'TopNewsD1',
-      gitHub: 'https://github.com/jackismoe/topnewsd1',
+      gitHub: 'https://github.com/jvckmo/topnewsd1',
       liveSite: '',
       notes: "My first development project. A CLI Ruby gem with a web scraper that goes to ESPN's Mens D1 Basketball site and grabs the top two stories on any given day. Currently not live on the web.",
       video: 'http://drive.google.com/file/d/1Qs3ZFGkpXzDJYel8CxUCyf5ilucB1U7U/preview',
@@ -70,12 +70,12 @@ export default class Home extends React.Component {
 
   handleGithub = event => {
     event.preventDefault()
-    window.open('https://www.github.com/jackismoe')
+    window.open('https://www.github.com/jvckmo')
   }
 
   handleLinkedin = event => {
     event.preventDefault()
-    window.open('https://www.linkedin.com/in/jackismoe')
+    window.open('https://www.linkedin.com/in/jvckmo')
   }
   
   render() {

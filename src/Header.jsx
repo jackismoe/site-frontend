@@ -16,7 +16,7 @@ export default class Header extends React.Component {
     document.querySelector('#resume-link').className = 'clicked'
   }
   showBlog = () => {
-    window.open("https://www.medium.com/@jacksonmo");
+    window.open("https://www.medium.com/@jvckmo");
   }
   render() {
     return(
