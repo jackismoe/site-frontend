@@ -1,10 +1,5 @@
 import React from 'react'
 import {v4 as uuidv4} from 'uuid'
-// import linkedin from './images/linkedin.png'
-// import github from './images/github.png'
-// import Banner from './Banner'
-// import BlackJackGif from './images/blackjack-code.gif'
-
 
 export default class Home extends React.Component {
   languages = ['css3', 'html5', 'javascript', 'postgres', 'rails', 'ruby', 'react', 'redux']

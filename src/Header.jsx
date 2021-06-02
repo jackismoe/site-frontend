@@ -1,11 +1,18 @@
 import React from 'react'
 
 export default class Header extends React.Component {
-  showHome= (e) => {
+  showHome = (e) => {
     e.preventDefault()
     this.props.history.push('/')
     document.querySelector('#home-link').className = 'clicked'
     document.querySelector('#blog-link').className = 'not-clicked'
+    document.querySelector('#resume-link').className = 'not-clicked'
+  }
+  showBlog = (e) => {
+    e.preventDefault()
+    this.props.history.push('/blog')
+    document.querySelector('#home-link').className = 'not-clicked'
+    document.querySelector('#blog-link').className = 'clicked'
     document.querySelector('#resume-link').className = 'not-clicked'
   }
   showResume = (e) => {
@@ -14,9 +21,6 @@ export default class Header extends React.Component {
     document.querySelector('#home-link').className = 'not-clicked'
     document.querySelector('#blog-link').className = 'not-clicked'
     document.querySelector('#resume-link').className = 'clicked'
-  }
-  showBlog = () => {
-    window.open("https://www.medium.com/@jvckmo");
   }
   render() {
     return(
@@ -33,7 +37,7 @@ export default class Header extends React.Component {
           <div className='extras'>
             <div className='list'>
               <p id='home-link' href='#' className='clicked' onClick={(e) => this.showHome(e)}>Home</p>
-              <p id='blog-link' className='not-clicked' onClick={this.showBlog}>Blog</p>
+              <p id='blog-link' className='not-clicked' onClick={(e) => this.showBlog(e)}>Blog</p>
               <p id='resume-link' href='#' className='not-clicked' onClick={(e) => this.showResume(e)}>Resume</p>
             </div>
           </div>
